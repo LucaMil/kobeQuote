@@ -1,1 +1,1 @@
-// console.log('Your up 2-0. Are you not happy?');
+const rng = Math.floor(Math.random() * 10);
