@@ -1,4 +1,4 @@
-const rng = (num) {
+const rng = (num) => {
   return Math.floor(Math.random() * num);
 }
 
@@ -9,3 +9,31 @@ const fullQuote = {
     "What's there to be happy about?", "And the mamba fell out."]
 };
 
+let fullInterview = [];
+
+for(let property in fullQuote) {
+  let phraseIdx = rng(fullQuote[property].length)
+
+  switch(property) {
+    case 'question': 
+      fullInterview.push(`${fullQuote[property][phraseIdx]}`)
+      break;
+    case 'quote1':
+      fullInterview.push(`${fullQuote[property][phraseIdx]}`)
+      break;
+    case 'quote2':
+      fullInterview.push(`${fullQuote[property][phraseIdx]}`)
+      break;
+    default:
+      fullInterview.push("Y'all soft like charmin!")
+  }
+}
+
+
+const combineInterview = (message) => {
+  const combined = fullInterview.join('\n');
+  console.log(combined);
+}
+
+
+combineInterview(fullInterview);
